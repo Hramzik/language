@@ -96,7 +96,6 @@ Return_code  front_end  (const char* code_file_name, const char* tree_file_name)
 
 
     /*for (size_t i = 0; i < words.len; i++) {
-
         printf ("%zd - \"%s\", type - %s\n", i, words.list [i].str, word_type_to_str (words.list [i].type));
     }*/
 
@@ -840,8 +839,10 @@ Return_code  build_nfunc  (Node** node_ptr, Word** word, Word* max_word) {
 
 
 
-    build_par (&(*node_ptr)->left_son, word, max_word);
+    if (((*word) < max_word) && ((*word)->type != LWT_ARG_CLOSE)) {
 
+        build_par (&(*node_ptr)->left_son, word, max_word);
+    }
 
 
     if (((*word) >= max_word) || ((*word)->type != LWT_ARG_CLOSE)) { LOG_ERROR (BAD_ARGS); return BAD_ARGS; }
@@ -1251,4 +1252,3 @@ Return_code  write_tabs  (FILE* file, size_t depth) {
 
     return SUCCESS;
 }
-

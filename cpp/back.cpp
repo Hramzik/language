@@ -292,7 +292,6 @@ Return_code  compile_tree  (FILE* file, Tree* tree) {
 
     fprintf (file, "push 0\n");
     fprintf (file, "pop RBP\n\n");
-    fprintf (file, "push 0\n");
     fprintf (file, "call main:\n");
     fprintf (file, "halt\n");
 

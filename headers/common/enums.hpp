@@ -9,17 +9,17 @@ enum Atom_type {
 
     LAT_DEFS,
     LAT_NVAR,
-    LAT_NFUNC,//
+    LAT_NFUNC,
     LAT_BLOCK,
     LAT_ARG,
     LAT_CALL,
-    LAT_PAR,//
+    LAT_PAR,
     LAT_OP,
     LAT_SEQ,
     LAT_ASS,
-    LAT_WHILE,//
-    LAT_IF,//
-    LAT_BRANCH,//
+    LAT_WHILE,
+    LAT_IF,
+    LAT_BRANCH,
     LAT_RET,
     LAT_CONST,
     LAT_VAR,
